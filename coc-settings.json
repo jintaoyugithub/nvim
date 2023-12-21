@@ -1,0 +1,24 @@
+{
+	"coc.preferences.extensionUpdateCheck": "weekly",
+	"suggest.noselect": true,
+	"suggest.enablePreselect": false,
+	"suggest.completionItemKindLabels": {
+		"class": "\uea7e",
+		"constant": "\ue22c",
+		"file": "\uea7b",
+		"folder": "\ue5ff",
+		"function": "\udb80\ude95",
+		"keyword": "\udb83\uddd6",
+		"property": "\uf0d6",
+		"reference": "\ueb36",
+		"text": "\udb82\udda8",
+		"struct": "\uea91",
+		"value": "\udb83\udd0d",
+		"variable": "\udb82\udee7"
+	},
+	"diagnostic.refreshOnInsertMode": false,
+	"diagnostic.checkCurrentLine": true,
+	"diagnostic.virtualText": true,
+	"codeLens.enable": true,
+	"coc.preferences.formatOnSave": true
+}

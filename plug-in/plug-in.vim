@@ -21,7 +21,8 @@ Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 " Plug 'dense-analysis/ale' 错误提示
 " Plug 'preservim/tagbar'
-Plug 'mbbill/undotree'
+" Plug 'mbbill/undotree' " get error in window, something about
+" undotreePersistUndo
 Plug 'junegunn/goyo.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'bagrat/vim-buffet'
@@ -47,10 +48,10 @@ Plug 'mhinz/vim-startify'
 " markdown
 " ======
 " if have nodejs and yarn
-" Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 " if don't have nodejs and yarn
 " Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+" Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'} "works fine in mac but laggy in windows
 
 " ======
 " general writing

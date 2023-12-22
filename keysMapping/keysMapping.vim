@@ -66,6 +66,10 @@ map bi <C-i>
 " use tm to start/stop using table mode
 noremap <leader>tm :TableModeToggle<CR>
 
+" markdown preview
+nnoremap <leader>mp <Plug>MarkdownPreview
+nnoremap <leader>ms <Plug>MarkdownPreview
+
 " markdown keybinds
 " autocmd  Filetype markdown  inoremap ,f <Esc>/<++><CR>:nohlsearch<CR>c4l
 " d for dash line

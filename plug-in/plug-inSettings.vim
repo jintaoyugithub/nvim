@@ -71,7 +71,7 @@ nmap ga <Plug>(EasyAlign)
 " ======
 " vim easy motion
 " ======
-nmap F <Plug>(easymotion-overwin-f2)
+nmap T <Plug>(easymotion-overwin-f2)
 nmap <leader>/ <Plug>(easymotion-bd-w)
 
 " ======
@@ -86,7 +86,6 @@ let g:startify_lists = [
       \ { 'header': ['   MRU'],            'type': 'files' },
       \ { 'header': ['   MRU '. getcwd()], 'type': 'dir' },
       \ ]
-
 
 " ======
 " Coc.nvim Settings

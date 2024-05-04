@@ -96,6 +96,10 @@ autocmd  Filetype markdown  inoremap ,1 #<Space><++><Esc>kA
 autocmd  Filetype markdown  inoremap ,2 ##<Space><++><Esc>kA
 autocmd  Filetype markdown  inoremap ,3 ###<Space><++><Esc>kA
 autocmd  Filetype markdown  inoremap ,4 ####<Space><++><Esc>kA
+" for fast math block
+autocmd  Filetype markdown  inoremap ,m {% katex %}{% endkatex %} <Esc>F{i
+autocmd  Filetype markdown  inoremap ,k <CR>{% katex %}<CR>{% endkatex %} <Esc>F{O
+
 
 " goyo
 nmap <leader>gy  :Goyo<CR>
@@ -106,6 +110,7 @@ nnoremap <F5> :UndotreeToggle<CR>
 
 " nerd tree
 noremap tt :NERDTreeToggle<CR> 
+noremap <leader>r :NERDTreeRefreshRoot<CR>
 
 " vim buffet
 nmap <leader>1 <Plug>BuffetSwitch(1)

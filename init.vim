@@ -21,6 +21,6 @@ else
 	source $HOME/.config/nvim/plug-in/plug-in.vim
 	source $HOME/.config/nvim/plug-in/plug-inSettings.vim
 	" theme
-	" source $HOME/.config/nvim/theme/catppuccin-mocha.vim
-	source $HOME/.config/nvim/theme/xcode.vim
+	source $HOME/.config/nvim/theme/catppuccin-mocha.vim
+	" source $HOME/.config/nvim/theme/xcode.vim
 endif

@@ -43,6 +43,7 @@ Plug 'vim-airline/vim-airline-themes'
 " fancy start screen of neovim
 Plug 'arzg/vim-colors-xcode'
 Plug 'mhinz/vim-startify'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
 " ======
 " markdown

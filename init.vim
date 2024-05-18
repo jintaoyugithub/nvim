@@ -13,7 +13,7 @@ if has("win64")
 	source $HOME\AppData\Local\nvim\keysMapping\keysMapping.vim
 	source $HOME\AppData\Local\nvim\plug-in\plug-in.vim
 	source $HOME\AppData\Local\nvim\plug-in\plug-inSettings.vim
-	source $HOME\AppData\Local\nvim\theme\xcode.vim
+	source $HOME\AppData\Local\nvim\theme\catppuccin-mocha.vim
 else
 	source $HOME/.config/nvim/general/generalSettings.vim
 	source $HOME/.config/nvim/keysMapping/keysMapping.vim

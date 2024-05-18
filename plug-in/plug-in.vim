@@ -75,4 +75,11 @@ Plug 'jiangmiao/auto-pairs'
 " ======
 Plug 'OmniSharp/omnisharp-vim'
 
+" ======
+" unreal engine
+" ======
+Plug 'zadirion/Unreal.nvim'
+Plug 'tpope/vim-dispatch'
+
+
 call plug#end()

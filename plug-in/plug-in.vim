@@ -44,6 +44,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'arzg/vim-colors-xcode'
 Plug 'mhinz/vim-startify'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'jacoborus/tender.vim'
 
 " ======
 " markdown

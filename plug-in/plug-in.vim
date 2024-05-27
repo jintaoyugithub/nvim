@@ -75,6 +75,17 @@ Plug 'jiangmiao/auto-pairs'
 " programming languages
 " ======
 Plug 'OmniSharp/omnisharp-vim'
+" highlight
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+
+" ======
+" debuger
+" ======
+Plug 'mfussenegger/nvim-dap'
+Plug 'nvim-neotest/nvim-nio'
+Plug 'rcarriga/nvim-dap-ui'
+Plug 'theHamsta/nvim-dap-virtual-text'
 
 " ======
 " unreal engine

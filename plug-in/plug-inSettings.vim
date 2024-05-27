@@ -158,3 +158,18 @@ function! g:BuffetSetCustomColors()
   hi! BuffetCurrentBuffer cterm=NONE ctermbg=5 ctermfg=8 guibg=#00FF00 guifg=#000000
   hi! BuffetBuffer cterm=NONE ctermbg=5 ctermfg=8 guibg=#00FF00 guifg=#000000
 endfunction
+
+" ======
+" nvim-treesitter(lua)
+" ======
+lua require('treesitter-config')
+
+" ======
+" nvim-dap(lua)
+" ======
+lua require('dap-config')
+
+" ======
+" nvim-dap-ui(lua)
+" ======
+lua require('dap-ui')

@@ -13,14 +13,16 @@ if has("win64")
 	source $HOME\AppData\Local\nvim\keysMapping\keysMapping.vim
 	source $HOME\AppData\Local\nvim\plug-in\plug-in.vim
 	source $HOME\AppData\Local\nvim\plug-in\plug-inSettings.vim
-	source $HOME\AppData\Local\nvim\theme\tender.vim
+	" source $HOME\AppData\Local\nvim\theme\tender.vim
+	" source $HOME\AppData\Local\nvim\theme\catppuccin-mocha.vim
+	source $HOME\AppData\Local\nvim\theme\onedark.vim
 else
 	source $HOME/.config/nvim/general/generalSettings.vim
 	source $HOME/.config/nvim/keysMapping/keysMapping.vim
 	" plug-in and settings
 	source $HOME/.config/nvim/plug-in/plug-in.vim
 	source $HOME/.config/nvim/plug-in/plug-inSettings.vim
-	" theme
 	source $HOME/.config/nvim/theme/catppuccin-mocha.vim
 	" source $HOME/.config/nvim/theme/xcode.vim
+	source $HOME/.config/nvim/theme/onedark.vim
 endif

@@ -173,3 +173,8 @@ lua require('dap-config')
 " nvim-dap-ui(lua)
 " ======
 lua require('dap-ui')
+
+" ======
+" nvim-dap-virtual-text(lua)
+" ======
+lua require('dap-virtual-text-config')

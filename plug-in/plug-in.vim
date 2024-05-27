@@ -45,6 +45,8 @@ Plug 'arzg/vim-colors-xcode'
 Plug 'mhinz/vim-startify'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'jacoborus/tender.vim'
+Plug 'navarasu/onedark.nvim'
+
 
 " ======
 " markdown

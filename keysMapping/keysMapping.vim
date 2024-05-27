@@ -42,6 +42,8 @@ map sh :set nosplitright<CR>:vsplit<CR>
 map sl :set splitright<CR>:vsplit<CR>
 map sj :set splitbelow<CR>:split<CR>
 map sk :set nosplitbelow<CR>:split<CR>
+map <leader>sn :vsp<space>
+
 " move cursor between two windows
 map <LEADER>k <C-w>k
 map <LEADER>j <C-w>j
@@ -130,3 +132,7 @@ noremap <Leader><S-Tab> :Bw!<CR>
 
 " comment
 vmap / gc
+
+" nvim-treesetter-cpp-tools
+" cf for create funcs
+nmap <leader>cf /class<CR>VG:TSCppDefineClassFunc

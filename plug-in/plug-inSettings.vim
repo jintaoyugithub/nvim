@@ -178,3 +178,13 @@ lua require('dap-ui')
 " nvim-dap-virtual-text(lua)
 " ======
 lua require('dap-virtual-text-config')
+
+" ======
+" nvim-treesitter-cpp-tools(lua)
+" ======
+lua require('cpptools-config')
+
+" ======
+" nvim-cmake-tool(lua)
+" ======
+lua require('nvim-cmaketool-config')

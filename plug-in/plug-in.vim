@@ -79,6 +79,9 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'OmniSharp/omnisharp-vim'
 " highlight
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'Badhi/nvim-treesitter-cpp-tools' "depend on nvim-treesitter
+Plug 'nvim-lua/plenary.nvim'
+Plug 'Civitasv/cmake-tools.nvim' " depend on plenary
 
 
 " ======

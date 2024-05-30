@@ -160,6 +160,11 @@ function! g:BuffetSetCustomColors()
 endfunction
 
 " ======
+" markdown preview
+" ======
+let g:mkdp_browser = ''
+
+" ======
 " nvim-treesitter(lua)
 " ======
 lua require('treesitter-config')

@@ -1,8 +1,8 @@
 -- default components
 local bufferlist      = require('ide.components.bufferlist')
--- can't used
--- local explorer        = require('ide.components.explorer')
--- local outline         = require('ide.components.outline')
+-- need neovim version greater than v-0.10.0
+local explorer        = require('ide.components.explorer')
+local outline         = require('ide.components.outline')
 local callhierarchy   = require('ide.components.callhierarchy')
 local commits         = require('ide.components.commits')
 local timeline        = require('ide.components.timeline')
@@ -29,7 +29,7 @@ require('ide').setup({
         -- this takes precedence.
         global_keymaps = {
             -- example, change all Component's hide keymap to "h"
-            -- hide = h
+						-- vim.api.nvim_set_keymap('n', '<C-h>', 'h', { noremap = true, silent = true })
         },
         -- example, prefer "x" for hide only for Explorer component.
         -- Explorer = {
@@ -46,7 +46,8 @@ require('ide').setup({
     -- panels defined by groups of components, user is free to redefine the defaults
     -- and/or add additional.
     panel_groups = {
-        explorer = {bufferlist.Name, callhierarchy.Name, bookmarks.Name, terminalbrowser.Name},
+        --explorer = {bufferlist.Name, callhierarchy.Name, bookmarks.Name, terminalbrowser.Name},
+				explorer = { bufferlist.Name, explorer.Name, bookmarks.Name, callhierarchy.Name, terminalbrowser.Name },
         terminal = {terminal.Name},
         git = {changes.Name, commits.Name, timeline.Name, branches.Name}
     },

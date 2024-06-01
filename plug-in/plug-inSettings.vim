@@ -132,7 +132,7 @@ nmap <silent> gr <Plug>(coc-references)
 " Open the existing NERDTree on each new tab.
 autocmd BufWinEnter * if &buftype != 'quickfix' && getcmdwintype() == '' | silent NERDTreeMirror | endif
 " Close the tab if NERDTree is the only window remaining in it.
-" autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 " neovim version should greater that 0.9
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | call feedkeys(":q!\<CR>:\<BS>") | endif
 
@@ -213,3 +213,7 @@ lua require('arrow-config')
 " ======
 lua require('nvim-ide-config')
 
+" ======
+" hardtime(lua)
+" ======
+lua require('hardtime-config')

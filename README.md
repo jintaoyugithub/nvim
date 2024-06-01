@@ -12,7 +12,9 @@ Clone the repo to "~/.config/"
 
 Clone the repo to "~/AppData/Local/"
 
-# Dependencies
+# Dependencies & Requirement
+
+Neovim version should greater than 0.10.0 to make sure some plug-ins can run normally.
 
 * nodejs
 * yarn

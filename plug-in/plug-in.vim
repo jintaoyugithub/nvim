@@ -74,6 +74,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'ryanoasis/vim-devicons'
 " Plug 'MattesGroeger/vim-bookmarks'
 Plug 'jiangmiao/auto-pairs'
+Plug 'm4xshen/hardtime.nvim'
 
 " ======
 " files finding

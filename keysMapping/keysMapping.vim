@@ -24,6 +24,7 @@ map Q :q<CR>
 map Z :nohlsearch<CR>
 map X :x<CR>
 map R :w<CR>:source $MYNVIM<CR>
+map <leader>q :qa<CR>
 
 " spell check
 map <leader>sc :set spell!<CR>

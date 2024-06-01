@@ -30,7 +30,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'easymotion/vim-easymotion'
 
 " ======
-" theme
+" theme and layout
 " ======
 "Plug 'projekt0n/github-nvim-theme'
 "Plug 'Shatur/neovim-ayu'
@@ -46,7 +46,9 @@ Plug 'mhinz/vim-startify'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'jacoborus/tender.vim'
 Plug 'navarasu/onedark.nvim'
-
+Plug 'projekt0n/github-nvim-theme'
+Plug 'stevearc/dressing.nvim'
+Plug 'ldelossa/nvim-ide'
 
 " ======
 " markdown
@@ -70,8 +72,19 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'Yggdroot/indentLine'
 " always put vim-devicons at last
 Plug 'ryanoasis/vim-devicons'
-Plug 'MattesGroeger/vim-bookmarks'
+" Plug 'MattesGroeger/vim-bookmarks'
 Plug 'jiangmiao/auto-pairs'
+
+" ======
+" files finding
+" ======
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
+" optional for icon support
+Plug 'nvim-tree/nvim-web-devicons'
+" Plug 'nvim-telescope/telescope.nvim'
+Plug 'otavioschwanck/arrow.nvim'
+
 
 " ======
 " programming languages

@@ -128,11 +128,14 @@ nmap <silent> gr <Plug>(coc-references)
 " nerd tree
 " ======
 " Start NERDTree and put the cursor back in the other window.
-autocmd VimEnter * NERDTree | wincmd p
+" autocmd VimEnter * NERDTree | wincmd p
 " Open the existing NERDTree on each new tab.
 autocmd BufWinEnter * if &buftype != 'quickfix' && getcmdwintype() == '' | silent NERDTreeMirror | endif
 " Close the tab if NERDTree is the only window remaining in it.
-autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+" autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+" neovim version should greater that 0.9
+autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | call feedkeys(":q!\<CR>:\<BS>") | endif
+
 let g:NERDTreeWinSize = 25 "设定 NERDTree 视窗大小
 let NERDTreeShowBookmarks=1  " 开启Nerdtree时自动显示Bookmarks
 let g:NERDTreeFileLines = 0
@@ -193,3 +196,20 @@ lua require('cpptools-config')
 " nvim-cmake-tool(lua)
 " ======
 lua require('nvim-cmaketool-config')
+
+" ======
+" nvim-dressing(lua)
+" ======
+lua require('dressing-config')
+
+
+" ======
+" arrow(loa)
+" ======
+lua require('arrow-config')
+
+" ======
+" nvim-ide(lua)
+" ======
+lua require('nvim-ide-config')
+

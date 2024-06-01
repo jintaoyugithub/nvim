@@ -136,3 +136,6 @@ vmap / gc
 " nvim-treesetter-cpp-tools
 " cf for create funcs
 nmap <leader>cf /class<CR>VG:TSCppDefineClassFunc
+
+" fzf lua
+nnoremap <leader>ff :FzfLua files cwd=

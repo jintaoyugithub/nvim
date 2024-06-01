@@ -54,3 +54,5 @@ set conceallevel=0
 " set gui font
 set guifont=DroidSansMono_Nerd_Font:h11
 
+" set 24 bit color
+set termguicolors

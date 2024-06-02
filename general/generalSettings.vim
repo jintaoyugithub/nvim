@@ -3,6 +3,8 @@
 " ======
 let mapleader=" "
 syntax on
+set syntax=markdown
+filetype plugin indent on
 set number 
 set relativenumber
 set wrap

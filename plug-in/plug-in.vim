@@ -49,6 +49,9 @@ Plug 'navarasu/onedark.nvim'
 Plug 'projekt0n/github-nvim-theme'
 Plug 'stevearc/dressing.nvim'
 Plug 'ldelossa/nvim-ide'
+Plug 'rcarriga/nvim-notify'
+Plug 'MunifTanjim/nui.nvim'
+Plug 'folke/noice.nvim'
 
 " ======
 " markdown
@@ -75,6 +78,8 @@ Plug 'ryanoasis/vim-devicons'
 " Plug 'MattesGroeger/vim-bookmarks'
 Plug 'jiangmiao/auto-pairs'
 Plug 'm4xshen/hardtime.nvim'
+Plug 'godlygeek/tabular'
+Plug 'preservim/vim-markdown'
 
 " ======
 " files finding
@@ -88,7 +93,7 @@ Plug 'otavioschwanck/arrow.nvim'
 
 
 " ======
-" programming languages
+" Languages and server
 " ======
 Plug 'OmniSharp/omnisharp-vim'
 " highlight
@@ -96,6 +101,9 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'Badhi/nvim-treesitter-cpp-tools' "depend on nvim-treesitter
 Plug 'nvim-lua/plenary.nvim'
 Plug 'Civitasv/cmake-tools.nvim' " depend on plenary
+Plug 'williamboman/mason.nvim'
+Plug 'jay-babu/mason-nvim-dap.nvim'
+
 
 
 " ======

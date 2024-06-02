@@ -62,8 +62,8 @@ map tn :-tabnext<CR>
 map tp :+tabnext<CR>
 
 " back to where I used to be
-map bo <C-o>
-map bi <C-i>
+" map bo <C-o>
+" map bi <C-i>
 		
 " vim table mode
 " use tm to start/stop using table mode
@@ -86,15 +86,15 @@ autocmd  Filetype markdown  inoremap ,i ** <++><Esc>F*i
 " h for hightlight
 autocmd  Filetype markdown  inoremap ,h `` <++><Esc>F`i
 " c for code block
-autocmd  Filetype markdown  inoremap ,c ```<Enter><++><Enter>```<Enter><Enter><++><Esc>4kA
+autocmd  Filetype markdown  inoremap ,c ```<Enter>```<Enter><++><Esc>2kA
 " p for pictures
-autocmd  Filetype markdown  inoremap ,p ![](<++>) <++><Esc>F[a
+autocmd  Filetype markdown  inoremap ,p ![(<++> <Esc>F[a
 " l for link
-autocmd  Filetype markdown  inoremap ,l [](<++>) <++><Esc>F[a
+autocmd  Filetype markdown  inoremap ,l [(<++> <Esc>F[a
 " f for font
-autocmd  Filetype markdown  inoremap ,f <font color='<++>'> <++> </font> <++>
+" autocmd  Filetype markdown  inoremap ,f <font color='<++>'> <++> </font> <++>
 " < for find <++>
-autocmd  Filetype markdown  inoremap ,< <Esc>/<++><CR>:nohlsearch<CR>c4l
+autocmd  Filetype markdown  inoremap ,f <Esc>/<++><CR>:nohlsearch<CR>c4l
 autocmd  Filetype markdown  inoremap ,1 #<Space><++><Esc>kA
 autocmd  Filetype markdown  inoremap ,2 ##<Space><++><Esc>kA
 autocmd  Filetype markdown  inoremap ,3 ###<Space><++><Esc>kA

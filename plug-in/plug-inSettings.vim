@@ -217,3 +217,28 @@ lua require('nvim-ide-config')
 " hardtime(lua)
 " ======
 lua require('hardtime-config')
+
+
+" ======
+" vim-markdown-format
+" ======
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_no_default_key_mappings = 1
+" you can set different math syntax externsions, like latex, yaml, json.
+let g:vim_markdown_math = 1
+let g:vim_markdown_new_list_item_indent = 2
+let g:vim_markdown_no_extensions_in_markdown = 1
+" disable automatically insert bulletpoints
+let g:vim_markdown_auto_insert_bullets = 0
+
+" ======
+" mason.nvim
+" ======
+lua require('mason-config')
+lua require('mason-nvim-dap-config')
+
+
+" ======
+" noice(lua)
+" ======
+lua require('noice-config')

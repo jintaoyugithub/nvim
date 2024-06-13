@@ -3,8 +3,9 @@
 " ======
 let mapleader=" "
 syntax on
-set syntax=markdown
-filetype plugin indent on
+" set syntax=markdown
+" filetype plugin indent on
+set conceallevel=0
 set number 
 set relativenumber
 set wrap

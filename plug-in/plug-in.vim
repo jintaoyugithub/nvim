@@ -54,13 +54,29 @@ Plug 'MunifTanjim/nui.nvim'
 Plug 'folke/noice.nvim'
 
 " ======
+" Languages and server
+" ======
+Plug 'OmniSharp/omnisharp-vim'
+" highlight
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'Badhi/nvim-treesitter-cpp-tools' "depend on nvim-treesitter
+Plug 'nvim-lua/plenary.nvim'
+Plug 'Civitasv/cmake-tools.nvim' " depend on plenary
+Plug 'williamboman/mason.nvim'
+Plug 'jay-babu/mason-nvim-dap.nvim'
+
+" ======
 " markdown
 " ======
 " if have nodejs and yarn
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
+" Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 " if don't have nodejs and yarn
 " Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 " Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'} "works fine in mac but laggy in windows
+Plug 'ellisonleao/glow.nvim'
+" Plug 'lukas-reineke/headlines.nvim'
+Plug 'godlygeek/tabular'
+Plug 'preservim/vim-markdown'
 
 " ======
 " general writing
@@ -78,8 +94,6 @@ Plug 'ryanoasis/vim-devicons'
 " Plug 'MattesGroeger/vim-bookmarks'
 Plug 'jiangmiao/auto-pairs'
 Plug 'm4xshen/hardtime.nvim'
-Plug 'godlygeek/tabular'
-Plug 'preservim/vim-markdown'
 
 " ======
 " files finding
@@ -90,21 +104,6 @@ Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
 Plug 'nvim-tree/nvim-web-devicons'
 " Plug 'nvim-telescope/telescope.nvim'
 Plug 'otavioschwanck/arrow.nvim'
-
-
-" ======
-" Languages and server
-" ======
-Plug 'OmniSharp/omnisharp-vim'
-" highlight
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'Badhi/nvim-treesitter-cpp-tools' "depend on nvim-treesitter
-Plug 'nvim-lua/plenary.nvim'
-Plug 'Civitasv/cmake-tools.nvim' " depend on plenary
-Plug 'williamboman/mason.nvim'
-Plug 'jay-babu/mason-nvim-dap.nvim'
-
-
 
 " ======
 " debuger

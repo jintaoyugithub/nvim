@@ -23,6 +23,7 @@ Neovim version should greater than 0.10.0 to make sure some plug-ins can run nor
 * fzf
 * ripgrep
 * fd
+* tree sitter cli
 * curl(window specific)
 * scoop(window specific)
 

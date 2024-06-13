@@ -47,7 +47,8 @@ require('ide').setup({
     -- and/or add additional.
     panel_groups = {
         --explorer = {bufferlist.Name, callhierarchy.Name, bookmarks.Name, terminalbrowser.Name},
-				explorer = { bufferlist.Name, explorer.Name, bookmarks.Name, callhierarchy.Name, terminalbrowser.Name },
+				--explorer = { bufferlist.Name, explorer.Name, bookmarks.Name, callhierarchy.Name, terminalbrowser.Name },
+				explorer = { explorer.Name },
         terminal = {terminal.Name},
         git = {changes.Name, commits.Name, timeline.Name, branches.Name}
     },

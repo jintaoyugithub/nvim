@@ -70,8 +70,8 @@ map tp :+tabnext<CR>
 noremap <leader>tm :TableModeToggle<CR>
 
 " markdown preview
-nnoremap <leader>mp <Plug>MarkdownPreview
-nnoremap <leader>ms <Plug>MarkdownPreview
+" nnoremap <leader>mp <Plug>MarkdownPreview
+" nnoremap <leader>ms <Plug>MarkdownPreview
 
 " markdown keybinds
 " autocmd  Filetype markdown  inoremap ,f <Esc>/<++><CR>:nohlsearch<CR>c4l
@@ -102,6 +102,9 @@ autocmd  Filetype markdown  inoremap ,4 ####<Space><++><Esc>kA
 " for fast math block
 autocmd  Filetype markdown  inoremap ,m {% katex %}{% endkatex %} <Esc>F{i
 autocmd  Filetype markdown  inoremap ,k <CR>{% katex %}<CR>{% endkatex %} <Esc>F{O
+
+" markdown glow
+nnoremap <leader>mp :Glow
 
 
 " goyo

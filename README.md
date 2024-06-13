@@ -39,6 +39,8 @@ When you try to set up neovim in a new device, you should configure some plug-in
 
 4. nerd-font: download the nred font and set the proper font in your terminal.
 
+5. I don't use markdown preview and treesitter-markdown anymore, insteal I use vim-markdown
+
 # Future work
 
 - Port the code to lua

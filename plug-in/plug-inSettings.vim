@@ -17,8 +17,11 @@ let g:airline_theme='bubblegum'
 " ======
 " indentLine
 " ======
+let g:indent_guides_guide_size            = 1  " 指定对齐线的尺寸
+let g:indent_guides_start_level           = 2  " 从第二层开始可视化显示缩进
+let g:indentLine_char = '|'
+set conceallevel=0
 let g:markdown_syntax_conceal=0
-autocmd FileType markdown setlocal g:indentLine_enabled = 0
 
 
 
@@ -99,39 +102,40 @@ let g:startify_lists = [
 " ======
 " Coc.nvim Settings
 " ======
-let g:coc_global_extensions = [
-		\ 'coc-json',
-		\ 'coc-vimlsp',
-		\ 'coc-marketplace',
-		\ 'coc-clangd']
+" let g:coc_global_extensions = [
+" 		\ 'coc-json',
+" 		\ 'coc-vimlsp',
+" 		\ 'coc-marketplace',
+" 		\ 'coc-clangd',
+" 		\ '@yaegassy/coc-marksman']
  
-set hidden
-set updatetime=100
-set shortmess+=c
-" use tab to complete the key word
-inoremap <silent><expr> <TAB>
-      \ coc#pum#visible() ? coc#pum#next(1) :
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>" 
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+" set hidden
+" set updatetime=100
+" set shortmess+=c
+" " use tab to complete the key word
+" inoremap <silent><expr> <TAB>
+"       \ coc#pum#visible() ? coc#pum#next(1) :
+"       \ CheckBackspace() ? "\<Tab>" :
+"       \ coc#refresh()
+" inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>" 
+" inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+"                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
-function! CheckBackspace() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
+" function! CheckBackspace() abort
+"   let col = col('.') - 1
+"   return !col || getline('.')[col - 1]  =~# '\s'
+" endfunction
 
-" use ~ to tirgger completion
-inoremap <silent><expr> ` coc#refresh()
-" go to next/pre error 
-nmap <silent> <leader>- <Plug>(coc-diagnostic-prev)
-nmap <silent> <leader>= <Plug>(coc-diagnostic-next)
-" go to code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+" " use ~ to tirgger completion
+" inoremap <silent><expr> ` coc#refresh()
+" " go to next/pre error 
+" nmap <silent> <leader>- <Plug>(coc-diagnostic-prev)
+" nmap <silent> <leader>= <Plug>(coc-diagnostic-next)
+" " go to code navigation.
+" nmap <silent> gd <Plug>(coc-definition)
+" nmap <silent> gy <Plug>(coc-type-definition)
+" nmap <silent> gi <Plug>(coc-implementation)
+" nmap <silent> gr <Plug>(coc-references)
 
 " ======
 " nerd tree
@@ -260,3 +264,4 @@ lua require('noice-config')
 " ======
 lua require('glow').setup()
 
+lua require('mason-lsp-config')

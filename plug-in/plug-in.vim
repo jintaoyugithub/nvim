@@ -24,10 +24,12 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Plug 'mbbill/undotree' " get error in window, something about
 " undotreePersistUndo
 Plug 'junegunn/goyo.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'bagrat/vim-buffet'
 Plug 'junegunn/vim-easy-align'
 Plug 'easymotion/vim-easymotion'
+
+
 
 " ======
 " theme and layout
@@ -64,6 +66,8 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'Civitasv/cmake-tools.nvim' " depend on plenary
 Plug 'williamboman/mason.nvim'
 Plug 'jay-babu/mason-nvim-dap.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'neovim/nvim-lspconfig'
 
 " ======
 " markdown
@@ -94,6 +98,9 @@ Plug 'ryanoasis/vim-devicons'
 " Plug 'MattesGroeger/vim-bookmarks'
 Plug 'jiangmiao/auto-pairs'
 Plug 'm4xshen/hardtime.nvim'
+Plug 'aklt/plantuml-syntax'
+Plug 'tyru/open-browser.vim'
+Plug 'weirongxu/plantuml-previewer.vim'
 
 " ======
 " files finding

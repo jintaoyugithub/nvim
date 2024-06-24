@@ -103,8 +103,10 @@ autocmd  Filetype markdown  inoremap ,4 ####<Space><++><Esc>kA
 autocmd  Filetype markdown  inoremap ,m {% katex %}{% endkatex %} <Esc>F{i
 autocmd  Filetype markdown  inoremap ,k <CR>{% katex %}<CR>{% endkatex %} <Esc>F{O
 
+autocmd FileType markdown let g:indentLine_char = ' '
+
 " markdown glow
-nnoremap <leader>mp :Glow
+nnoremap <leader>mp :Glow<CR>
 
 
 " goyo

@@ -4,7 +4,7 @@
 let mapleader=" "
 syntax on
 " set syntax=markdown
-" filetype plugin indent on
+filetype plugin indent on
 set conceallevel=0
 set number 
 set relativenumber
@@ -49,10 +49,6 @@ let &t_SR = "\<Esc>]50;CursorShape=2\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-" indentLine settings 
-let g:indent_guides_guide_size            = 1  " 指定对齐线的尺寸
-let g:indent_guides_start_level           = 2  " 从第二层开始可视化显示缩进
-set conceallevel=0
 
 " set gui font
 set guifont=DroidSansMono_Nerd_Font:h11

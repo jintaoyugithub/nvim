@@ -24,6 +24,8 @@ Neovim version should greater than 0.10.0 to make sure some plug-ins can run nor
 * ripgrep
 * fd
 * tree sitter cli
+* java(planetuml)
+* graphviz(planetuml)
 * curl(window specific)
 * scoop(window specific)
 

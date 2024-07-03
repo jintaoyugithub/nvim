@@ -26,3 +26,26 @@ vim.opt.ignorecase = true
 
 -- enable a wider variety of colors
 vim.opt.termguicolors = true
+
+
+-- Encoding format --
+vim.opt.encoding = "utf-8"
+
+-- Font
+vim.opt.guifont = "JetBrains Mono"
+
+
+
+-- Remain the cursor position of last time --
+local t_SR = "\27]50;CursorShape=2\7"
+local t_EI = "\27]50;CursorShape=0\7"
+
+vim.api.nvim_create_autocmd("BufReadPost", {
+    pattern = "*",
+    callback = function()
+        local last_position = vim.fn.line("'\"")
+        if last_position > 1 and last_position <= vim.fn.line("$") then
+            vim.cmd("normal! g'\"")
+        end
+    end,
+})

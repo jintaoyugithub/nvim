@@ -37,9 +37,7 @@ vim.api.nvim_set_keymap('n', '<leader>h', '<C-w>h', {})
 vim.api.nvim_set_keymap('n', '<leader>l', '<C-w>l', {})
 
 -- New tab settings
-vim.api.nvim_set_keymap('n', 'nt', ':tabe<CR>', {})
-vim.api.nvim_set_keymap('n', 'tn', ':-tabnext<CR>', {})
-vim.api.nvim_set_keymap('n', 'tp', ':+tabnext<CR>', {})
+vim.api.nvim_set_keymap('n', '<leader>nt', ':tabe<CR>', {})
 
 -- Toggle Table Mode
 vim.api.nvim_set_keymap('n', '<leader>tm', ':TableModeToggle<CR>', { noremap = true })

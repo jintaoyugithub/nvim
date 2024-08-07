@@ -27,13 +27,14 @@ vim.opt.ignorecase = true
 -- enable a wider variety of colors
 vim.opt.termguicolors = true
 
-
 -- Encoding format --
 vim.opt.encoding = "utf-8"
 
 -- Font
 vim.opt.guifont = "JetBrains Mono"
 
+-- UI display level
+vim.opt.conceallevel = 2
 
 
 -- Remain the cursor position of last time --

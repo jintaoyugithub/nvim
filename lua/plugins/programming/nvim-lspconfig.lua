@@ -10,5 +10,8 @@ return {
         lspconfig.lua_ls.setup {
             capabilities = capabilities,
         }
+        lspconfig.cmake.setup {
+            capabilities = capabilities,
+        }
     end,
 }

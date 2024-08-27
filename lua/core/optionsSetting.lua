@@ -4,7 +4,7 @@ vim.opt.relativenumber = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
-vim.opt.wrap = false
+vim.opt.wrap = true
 
 vim.opt.expandtab = true
 vim.opt.tabstop = 4
@@ -34,7 +34,7 @@ vim.opt.encoding = "utf-8"
 vim.opt.guifont = "JetBrains Mono"
 
 -- UI display level
-vim.opt.conceallevel = 2
+vim.opt.conceallevel = 1
 
 
 -- Remain the cursor position of last time --

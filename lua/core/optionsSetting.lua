@@ -50,3 +50,5 @@ vim.api.nvim_create_autocmd("BufReadPost", {
         end
     end,
 })
+
+vim.diagnostic.config({ virtual_text = false });

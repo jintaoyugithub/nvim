@@ -12,9 +12,11 @@ This is necessary for telescope.nvim to work properly.
 
 - lua-language-server
 
-On MacOS, you could download the lua-language-server with
+- cmake-language-server
+
+On MacOS, you could download the all the servers with:
 
 ```bash
-brew install lua-language-server
+brew install lua-language-server cmake-language-server
 ```
 

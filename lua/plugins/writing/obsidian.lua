@@ -62,6 +62,41 @@ return {
             --  * "notes_subdir" - put new notes in the default notes subdirectory.
             new_notes_location = "notes_subdir",
 
+            daily_notes = {
+                -- Optional, if you keep daily notes in a separate directory.
+                folder = "notes/dailies",
+                -- Optional, if you want to change the date format for the ID of daily notes.
+                date_format = "%Y-%m-%d",
+                -- Optional, if you want to change the date format of the default alias of daily notes.
+                alias_format = "%B %-d, %Y",
+                -- Optional, default tags to add to each new daily note created.
+                default_tags = { "daily-notes" },
+                -- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
+                template = "daily_note_template.md"
+            },
+
+            -- Optional, alternatively you can customize the frontmatter data.
+            ---@return table
+            note_frontmatter_func = function(note)
+                -- Add the title of the note as an alias.
+                if note.title then
+                    note:add_alias(note.title)
+                end
+
+                -- Set the default meta data here
+                local out = { id = note.id, aliases = note.aliases, tags = note.tags }
+
+                -- `note.metadata` contains any manually added fields in the frontmatter.
+                -- So here we just make sure those fields are kept in the frontmatter.
+                if note.metadata ~= nil and not vim.tbl_isempty(note.metadata) then
+                    for k, v in pairs(note.metadata) do
+                        out[k] = v
+                    end
+                end
+
+                return out
+            end,
+
             -- Optional, for templates (see below).
             templates = {
                 folder = "templates",
@@ -81,6 +116,32 @@ return {
                 -- vim.cmd(':silent exec "!start ' .. url .. '"') -- Windows
                 -- vim.ui.open(url) -- need Neovim 0.10.0+
             end,
+
+            -- Specify how to handle attachments.
+            attachments = {
+                -- The default folder to place images in via `:ObsidianPasteImg`.
+                -- If this is a relative path it will be interpreted as relative to the vault root.
+                -- You can always override this per image by passing a full path to the command instead of just a filename.
+                img_folder = "assets/imgs", -- This is the default
+
+                -- Optional, customize the default name or prefix when pasting images via `:ObsidianPasteImg`.
+                ---@return string
+                img_name_func = function()
+                    -- Prefix image names with timestamp.
+                    return string.format("%s-", os.time())
+                end,
+
+                -- A function that determines the text to insert in the note when pasting an image.
+                -- It takes two arguments, the `obsidian.Client` and an `obsidian.Path` to the image file.
+                -- This is the default implementation.
+                ---@param client obsidian.Client
+                ---@param path obsidian.Path the absolute path to the image file
+                ---@return string
+                img_text_func = function(client, path)
+                    path = client:vault_relative_path(path) or path
+                    return string.format("![%s](%s)", path.name, path)
+                end,
+            },
         }
     end
 }

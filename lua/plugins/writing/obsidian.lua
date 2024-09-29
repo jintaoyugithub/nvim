@@ -1,6 +1,8 @@
 return {
     "epwalsh/obsidian.nvim",
     version = "*", -- recommended, use latest release instead of latest commit
+    lazy = true,
+    ft = "markdown",
     dependencies = {
         -- Required.
         "nvim-lua/plenary.nvim",
@@ -138,6 +140,11 @@ return {
                     end,
                     day = function()
                         return os.date("%d")
+                    end,
+                    compute_wakeup = function()
+                        -- assume I spent 30 mins on breakfast and other things
+                        local wakeup = os.time() - (30 * 60)
+                        return os.date("%H:%M", wakeup)
                     end
                 },
             },
@@ -149,7 +156,7 @@ return {
 
             daily_notes = {
                 -- Optional, if you keep daily notes in a separate directory.
-                folder = "notes/daily_notes",
+                folder = "notes/daily-notes",
                 -- Optional, if you want to change the date format for the ID of daily notes.
                 date_format = "%Y-%m-%d",
                 -- Optional, if you want to change the date format of the default alias of daily notes.

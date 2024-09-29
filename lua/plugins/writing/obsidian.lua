@@ -9,17 +9,21 @@ return {
     },
 
     keys = {
-        { "<leader>oo", "<cmd>ObsidianOpen<cr>",        desc = "Open the notes in Obsidian" },
-        { "<leader>on", ":ObsidianNew ",                desc = "Create a new note" },
-        { "<leader>os", "<cmd>ObsidianSearch<cr>",      desc = "Search Obsidian" },
-        { "<leader>of", "<cmd>ObsidianQuickSwitch<cr>", desc = "Obsidian Find Files" },
-        { "<leader>og", "<cmd>ObsidianTags<cr>",        desc = "a picker list of all occurrences of the given tags" },
-        { "<leader>op", "<cmd>ObsidianPasteImg<cr>",    desc = "Obsidian Paste Image" },
-        { "<leader>or", "<cmd>ObsidianRename<cr>",      desc = "Obsidian Rename current note" },
-        { "<leader>oi", "<cmd>ObsidianTemplate<cr>",    desc = "Insert Obsidian Template into file" },
-        { "<leader>oe", "<cmd>ObsidianExtracNote<cr>",  desc = "extract the visually selected text into a new note and link to it" },
-        { "<leader>od", "<cmd>ObsidianDailies<cr>",     desc = "a picker display daily-notes" },
-        { "<leader>ot", "<cmd>ObsidianToday<cr>",       desc = "open/create a daily note" },
+        { "<leader>oo", "<cmd>ObsidianOpen<cr>",                   desc = "Open the notes in Obsidian" },
+        { "<leader>on", ":ObsidianNew ",                           desc = "Create a new note" },
+        { "<leader>os", "<cmd>ObsidianSearch<cr>",                 desc = "Search Obsidian" },
+        { "<leader>of", "<cmd>ObsidianQuickSwitch<cr>",            desc = "Obsidian Find Files" },
+        { "<leader>og", "<cmd>ObsidianTags<cr>",                   desc = "a picker list of all occurrences of the given tags" },
+        { "<leader>op", "<cmd>ObsidianPasteImg<cr>",               desc = "Obsidian Paste Image" },
+        { "<leader>or", "<cmd>ObsidianRename<cr>",                 desc = "Obsidian Rename current note" },
+        { "<leader>oi", "<cmd>ObsidianTemplate<cr>",               desc = "Insert Obsidian Template into file" },
+        { "<leader>oe", "<cmd>ObsidianExtracNote<cr>",             desc = "extract the visually selected text into a new note and link to it" },
+        { "<leader>od", "<cmd>ObsidianDailies<cr>",                desc = "a picker display daily-notes" },
+        { "<leader>ot", "<cmd>ObsidianToday<cr>",                  desc = "open/create a daily note" },
+        -- For obsidian review mode
+        { "<leader>ok", ":!mv '%:p' ~/vaults/verified<cr>:bd<cr>", desc = "move the file to verified folder" },
+        { "<leader>no", ":!rm '%:p'<cr>:bd<cr>",                   desc = "delete the file" },
+        { "<leader>rt", "0wdf_",                                   desc = "remove the date of the title" },
     },
 
     config = function()
@@ -45,7 +49,7 @@ return {
                         suffix = suffix .. string.char(math.random(65, 90))
                     end
                 end
-                return tostring(os.time()) .. "-" .. suffix
+                return tostring(os.date("%Y-%m-%d")) .. "_" .. suffix
             end,
 
             -- Optional, customize how note file names are generated given the ID, target directory, and title.

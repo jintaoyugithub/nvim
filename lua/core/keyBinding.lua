@@ -78,7 +78,6 @@ vim.api.nvim_set_keymap('n', '<leader>gr', ':lua vim.lsp.buf.references()<CR>', 
 vim.api.nvim_set_keymap('n', '<Leader>gt', ':lua vim.lsp.buf.type_definition()<CR>', {})
 
 -- display the error
--- 在你的 Neovim 配置文件 (init.lua) 中添加以下内容
 vim.api.nvim_set_keymap('n', '<leader>de', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>ne', '<cmd>lua vim.diagnostic.goto_next()<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>pe', '<cmd>lua vim.diagnostic.goto_prev()<CR>', { noremap = true, silent = true })

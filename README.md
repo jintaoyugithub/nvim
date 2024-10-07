@@ -20,6 +20,8 @@ This is necessary for telescope.nvim to work properly.
 
 - cmake-language-server
 
+- pylsp(python-lsp-server)
+
 On MacOS, you could download the all the servers with:
 
 ```bash

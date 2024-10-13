@@ -26,6 +26,8 @@ return {
         { "<leader>ok", ":!mv '%:p' ~/vaults/verified<cr>:bd<cr>", desc = "move the file to verified folder" },
         { "<leader>no", ":!rm '%:p'<cr>:bd<cr>",                   desc = "delete the file" },
         { "<leader>rt", "0wdf_",                                   desc = "remove the date of the title" },
+        { "<leader>cn", "0f]hxi~<esc>",                            desc = "checkbox no" },
+        { "<leader>cf", "0f]hxi><esc>",                            desc = "checkbox follow" },
     },
 
     config = function()

@@ -31,6 +31,46 @@ return {
     },
 
     config = function()
+        -- Custom functions
+        -- 1. Auto generate id for choosen blocks
+        local function generate_id()
+            local chars = 'abcdefghijklmnopqrstuvwxyz0123456789'
+            local id = ''
+            math.randomseed(os.time())
+            for i = 1, 6 do
+                local index = math.random(#chars)
+                id = id .. chars:sub(index, index)
+            end
+            return ' ^' .. id
+        end
+
+        local function append_id_to_selection()
+            -- Get the current buffer and the selection range
+            local bufnr = vim.api.nvim_get_current_buf()
+            local start_pos = vim.api.nvim_buf_get_mark(bufnr, '<')
+            local end_pos = vim.api.nvim_buf_get_mark(bufnr, '>')
+
+            -- Get the content of the selected lines
+            local selected_lines = vim.api.nvim_buf_get_lines(bufnr, start_pos[1] - 1, end_pos[1], false)
+
+            -- Generate the ID
+            local id = generate_id()
+
+            -- If only one line is selected, append the ID to the end of that line
+            if #selected_lines == 1 then
+                local line = selected_lines[1]
+                -- Append the ID at the end of the line
+                vim.api.nvim_buf_set_text(bufnr, start_pos[1] - 1, #line, start_pos[1] - 1, #line, { id })
+            else
+                -- If multiple lines are selected, append the ID to the end of the last line
+                vim.api.nvim_buf_set_text(bufnr, end_pos[1] - 1, #selected_lines[#selected_lines], end_pos[1] - 1,
+                    #selected_lines[#selected_lines], { id })
+            end
+        end
+
+        -- Custom commands
+        vim.api.nvim_create_user_command('AddID', append_id_to_selection, { range = true })
+
         require("obsidian").setup {
             -- Set up the vaults directory
             dir = "$HOME/vaults/",
@@ -216,5 +256,3 @@ return {
         }
     end
 }
-
--- Create my own custom command to invoke different templates

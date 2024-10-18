@@ -80,36 +80,35 @@ return {
             ---@param title string|?
             ---@return string
             note_id_func = function(title)
-                -- Create note IDs using the title followed by an underscore and 'YYYY-MM-DD'.
-                -- For example, a note with the title 'My new note' will be given an ID like
-                -- 'my-new-note_2024-10-18', and the file name 'my-new-note_2024-10-18.md'
-
-                local suffix = ""
-                local date_suffix = os.date("%Y-%m-%d") -- Get the current date in 'YYYY-MM-DD' format
+                -- Get the current date in 'YYYY-MM-DD' format
+                local date_suffix = os.date("%Y-%m-%d")
+                local id = ""
 
                 if title ~= nil then
                     -- If title is given, transform it into a valid file name prefix.
-                    suffix = title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", ""):lower()
+                    id = title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", ""):lower() .. "_" .. date_suffix
                 else
                     -- If title is nil, just add 4 random uppercase letters as the prefix.
                     for _ = 1, 4 do
-                        suffix = suffix .. string.char(math.random(65, 90))
+                        id = id .. string.char(math.random(65, 90))
                     end
                 end
 
                 -- Return the final ID as 'title_YYYY-MM-DD'
-                return suffix .. "_" .. date_suffix
+                return id
             end,
 
             -- Optional, customize how note file names are generated given the ID, target directory, and title.
             ---@param spec { id: string, dir: obsidian.Path, title: string|? }
             ---@return string|obsidian.Path The full path to the new note.
             note_path_func = function(spec)
-                -- This is equivalent to the default behavior.
-                local path = spec.dir / tostring(spec.id)
+                -- The file name should only contain the title (ID without the date part)
+                local filename = spec.id:match("^(.*)_") -- Extract the title part before the underscore
+
+                -- Return the full file path with ".md" extension
+                local path = spec.dir / filename
                 return path:with_suffix(".md")
             end,
-
 
             -- Set up completion
             completion = {

@@ -38,6 +38,8 @@ In order to make obsidian.nvim work, you should create a vault and some sub-dirs
         - template
         - assets
             - imgs
+        - notes
+            - every-week
         - weekly_reports (optional)
         - monthly_reports (optional)
         - literature_notes (optional)

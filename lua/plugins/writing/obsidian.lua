@@ -80,20 +80,25 @@ return {
             ---@param title string|?
             ---@return string
             note_id_func = function(title)
-                -- Create note IDs in a Zettelkasten format with a timestamp and a suffix.
-                -- In this case a note with the title 'My new note' will be given an ID that looks
-                -- like '1657296016-my-new-note', and therefore the file name '1657296016-my-new-note.md'
+                -- Create note IDs using the title followed by an underscore and 'YYYY-MM-DD'.
+                -- For example, a note with the title 'My new note' will be given an ID like
+                -- 'my-new-note_2024-10-18', and the file name 'my-new-note_2024-10-18.md'
+
                 local suffix = ""
+                local date_suffix = os.date("%Y-%m-%d") -- Get the current date in 'YYYY-MM-DD' format
+
                 if title ~= nil then
-                    -- If title is given, transform it into valid file name.
+                    -- If title is given, transform it into a valid file name prefix.
                     suffix = title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", ""):lower()
                 else
-                    -- If title is nil, just add 4 random uppercase letters to the suffix.
+                    -- If title is nil, just add 4 random uppercase letters as the prefix.
                     for _ = 1, 4 do
                         suffix = suffix .. string.char(math.random(65, 90))
                     end
                 end
-                return tostring(os.date("%Y-%m-%d")) .. "_" .. suffix
+
+                -- Return the final ID as 'title_YYYY-MM-DD'
+                return suffix .. "_" .. date_suffix
             end,
 
             -- Optional, customize how note file names are generated given the ID, target directory, and title.
@@ -104,6 +109,7 @@ return {
                 local path = spec.dir / tostring(spec.id)
                 return path:with_suffix(".md")
             end,
+
 
             -- Set up completion
             completion = {

@@ -27,6 +27,15 @@ On MacOS, you could download the all the servers with:
 ```bash
 brew install lua-language-server cmake-language-server
 ```
+
+### font
+
+Currently I use [Jetbrain Mono](https://www.jetbrains.com/zh-cn/lp/mono/) as the default font. If you're using MacOS, you can use `homebrew` to download the font by using the command:
+
+```bash
+brew install --cask font-jetbrains-mono
+```
+
 ### obsidian
 
 In order to make obsidian.nvim work, you should create a vault and some sub-dirs to store all the markdown files, the folder structure will be like the following:

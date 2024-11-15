@@ -6,9 +6,16 @@ return {
             -- Set up the formatter for each language --
             formatters_by_ft = {
                 lua = { "stylua" },
-                cpp = { "clang-format" },
+                cpp = { "clang_format" },
                 cmake = { "cmake_format" },
                 markdown = { "mdformat" },
+            },
+
+            formatters = {
+                clang_format = {
+                    command = "clang-format",
+                    args = { "--style=Microsoft" },
+                },
             },
 
             -- Auto format on save --

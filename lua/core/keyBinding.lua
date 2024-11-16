@@ -2,10 +2,16 @@
 vim.g.mapleader = " "
 
 -- Key mappings
-vim.api.nvim_set_keymap('n', 'J', '5j', { noremap = true })
-vim.api.nvim_set_keymap('n', 'K', '5k', { noremap = true })
-vim.api.nvim_set_keymap('n', 'H', '5h', { noremap = true })
-vim.api.nvim_set_keymap('n', 'L', '5l', { noremap = true })
+local mappings = {
+    J = '5j',
+    K = '5k',
+    H = '5h',
+    L = '5l',
+}
+for key, cmd in pairs(mappings) do
+  vim.api.nvim_set_keymap('n', key, cmd, { noremap = true })
+  vim.api.nvim_set_keymap('v', key, cmd, { noremap = true })
+end
 vim.api.nvim_set_keymap('n', 'vv', '<c-v>', { noremap = true })
 vim.api.nvim_set_keymap('n', 'Y', '"+y', { noremap = true })
 

@@ -22,6 +22,8 @@ This is necessary for telescope.nvim to work properly.
 
 - pylsp(python-lsp-server)
 
+- llvm(required by c++)
+
 On MacOS, you could download the all the servers with:
 
 ```bash

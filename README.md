@@ -38,6 +38,16 @@ Currently I use [Jetbrain Mono](https://www.jetbrains.com/zh-cn/lp/mono/) as the
 brew install --cask font-jetbrains-mono
 ```
 
+### Code format
+
+I'm using clang-format Microsoft style, you can check at the `conform.lua` file, if the format doesn't work, try to install the laster version of the clang-format
+
+On MacOS, you can try:
+
+```bash
+brew install clang-format
+```
+
 ### obsidian
 
 In order to make obsidian.nvim work, you should create a vault and some sub-dirs to store all the markdown files, the folder structure will be like the following:

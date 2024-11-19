@@ -16,6 +16,10 @@ return {
                     command = "clang-format",
                     args = { "--style=Microsoft" },
                 },
+                cmakeformat = {
+                    command = "cmake_format",
+                    args = { "--style=Microsoft" },
+                },
             },
 
             -- Auto format on save --

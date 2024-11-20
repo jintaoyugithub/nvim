@@ -102,8 +102,11 @@ return {
             ---@param spec { id: string, dir: obsidian.Path, title: string|? }
             ---@return string|obsidian.Path The full path to the new note.
             note_path_func = function(spec)
-                -- The file name should only contain the title (ID without the date part)
-                local filename = spec.id:match("^(.*)_") -- Extract the title part before the underscore
+                -- Extract the title from the ID (everything before the last underscore)
+                local title_part = spec.id:match("^(.*)_%d%d%d%d%-%d%d%-%d%d$")
+
+                -- If title is nil, fallback to using the ID directly
+                local filename = (title_part or spec.id) .. "_" .. os.date("%Y-%m-%d")
 
                 -- Return the full file path with ".md" extension
                 local path = spec.dir / filename

@@ -9,8 +9,8 @@ local mappings = {
     L = '5l',
 }
 for key, cmd in pairs(mappings) do
-  vim.api.nvim_set_keymap('n', key, cmd, { noremap = true })
-  vim.api.nvim_set_keymap('v', key, cmd, { noremap = true })
+    vim.api.nvim_set_keymap('n', key, cmd, { noremap = true })
+    vim.api.nvim_set_keymap('v', key, cmd, { noremap = true })
 end
 vim.api.nvim_set_keymap('n', 'vv', '<c-v>', { noremap = true })
 vim.api.nvim_set_keymap('n', 'Y', '"+y', { noremap = true })
@@ -44,7 +44,6 @@ vim.api.nvim_set_keymap('n', '<leader>l', '<C-w>l', {})
 
 -- Tabs
 vim.api.nvim_set_keymap('n', '<leader>nt', ':tabe<CR>', {})
-vim.api.nvim_set_keymap('n', '<leader>bd', ':bd<CR>', {})
 
 -- Toggle Table Mode
 vim.api.nvim_set_keymap('n', '<leader>tm', ':TableModeToggle<CR>', { noremap = true })

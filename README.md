@@ -32,11 +32,8 @@ brew install lua-language-server cmake-language-server
 
 ### font
 
-Currently I use [Jetbrain Mono](https://www.jetbrains.com/zh-cn/lp/mono/) as the default font. If you're using MacOS, you can use `homebrew` to download the font by using the command:
+Currently I use [Jetbrain Mono Nerd Font](https://www.nerdfonts.com/font-downloads) as the default font. 
 
-```bash
-brew install --cask font-jetbrains-mono
-```
 
 ### Code format
 

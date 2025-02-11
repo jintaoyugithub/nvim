@@ -12,6 +12,13 @@ return {
     config = function()
         local opts = {}                  -- go to the following link to see all the options in the deafult config file
         require("bookmarks").setup(opts) -- you must call setup to init sqlite db
+        
+        -- Key Bindings --
+        vim.api.nvim_set_keymap('n', '<leader>bm', ':BookmarksMark<CR>', { noremap = true })
+        vim.api.nvim_set_keymap('n', '<leader>bs', ':BookmarksGoto<CR>', { noremap = true })
+        vim.api.nvim_set_keymap('n', '<leader>bl', ':BookmarksLists<CR>', { noremap = true })
+        vim.api.nvim_set_keymap('n', '<leader>bt', ':BookmarksTree<CR>', { noremap = true })
+        vim.api.nvim_set_keymap('n', '<leader>bd', ':BookmarksDesc<CR>', { noremap = true })
     end,
 }
 

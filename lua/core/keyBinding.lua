@@ -68,19 +68,12 @@ vim.api.nvim_command('autocmd FileType markdown inoremap ,m {% katex %}{% endkat
 vim.api.nvim_command('autocmd FileType markdown inoremap ,k <CR>{% katex %}<CR>{% endkatex %} <Esc>F{O')
 
 -- lsp key mapping --
--- 跳转到声明
 vim.api.nvim_set_keymap('n', '<leader>gD', ':lua vim.lsp.buf.declaration()<CR>', {})
--- 跳转到定义
 vim.api.nvim_set_keymap('n', '<leader>gd', ':lua vim.lsp.buf.definition()<CR>', {})
--- 查看文档
 vim.api.nvim_set_keymap('n', '<leader>gh', ':lua vim.lsp.buf.hover()<CR>', {})
--- 跳转到实现
 vim.api.nvim_set_keymap('n', '<leader>gi', ':lua vim.lsp.buf.implementation()<CR>', {})
--- 签名帮助
 vim.api.nvim_set_keymap('n', '<leader>gs', ':lua vim.lsp.buf.signature_help()<CR>', {})
--- 跳转到引用
 vim.api.nvim_set_keymap('n', '<leader>gr', ':lua vim.lsp.buf.references()<CR>', {})
--- 跳转到类型
 vim.api.nvim_set_keymap('n', '<Leader>gt', ':lua vim.lsp.buf.type_definition()<CR>', {})
 
 -- display the error

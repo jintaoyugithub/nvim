@@ -53,6 +53,6 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 
 vim.diagnostic.config({ virtual_text = false });
 
--- Fold setting
-vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
-vim.opt.foldmethod = 'expr'
+-- Treesitter fold setting
+-- vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+-- vim.opt.foldmethod = 'expr'

@@ -50,24 +50,32 @@ brew install clang-format
 In order to make obsidian.nvim work, you should create a vault and some sub-dirs to store all the markdown files, the folder structure will be like the following:
 
 - $HOME
-    - vaults
-        - daily_notes
-        - temp-notes
-        - template
-        - assets
-            - imgs
-        - notes
-            - every-week
-        - weekly_reports (optional)
-        - monthly_reports (optional)
-        - literature_notes (optional)
-        - distrilled_notes (optional)
+    + vaults
+        * daily_notes
+        * temp-notes
+        * template
+        * assets
+           . imgs
+        * notes
+           . every-week
+        * weekly_reports (optional)
+        * monthly_reports (optional)
+        * literature_notes (optional)
+        * distrilled_notes (optional)
 
 [pngpaste plugin](https://github.com/jcsalterego/pngpaste) is needed for obsidian to paste images on **Macos**!
 
 On **Linux**, use [xclip](https://github.com/astrand/xclip)
 
-### Markdown preview
+### Markdown
 
 `Yarn` is necessary to install markdown preview plugin
+
+> [!TIP]
+>
+> Install necessary parsers are necessary for treesitter
+
+```nvim
+:TSInstall markdown markdown_inline html latex typst yaml
+```
 

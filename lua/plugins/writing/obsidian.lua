@@ -72,6 +72,7 @@ return {
         vim.api.nvim_create_user_command('AddID', append_id_to_selection, { range = true })
 
         require("obsidian").setup {
+            ui = { enable = true },
             -- Set up the vaults directory
             dir = "$HOME/vaults/",
             notes_subdir = "inbox",

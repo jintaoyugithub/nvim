@@ -63,5 +63,11 @@ In order to make obsidian.nvim work, you should create a vault and some sub-dirs
         - literature_notes (optional)
         - distrilled_notes (optional)
 
-[pngpaste plugin](https://github.com/jcsalterego/pngpaste) is needed for obsidian to paste images!
+[pngpaste plugin](https://github.com/jcsalterego/pngpaste) is needed for obsidian to paste images on **Macos**!
+
+On **Linux**, use [xclip](https://github.com/astrand/xclip)
+
+### Markdown preview
+
+`Yarn` is necessary to install markdown preview plugin
 

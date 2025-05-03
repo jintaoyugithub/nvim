@@ -8,11 +8,11 @@ return {
     },
 
     keys = {
-        { "<leader>cn", "wiNOTE:<Esc>",                   desc = "make current comment as note" },
-        { "<leader>ch", "wiHACK:<Esc>",                   desc = "make current comment as hack" },
-        { "<leader>ct", "wiTODO:<Esc>",                   desc = "make current comment as todo" },
-        { "<leader>cf", "wiFIX:<Esc>",                    desc = "make current comment as fix" },
-        { "<leader>cw", "wiWARNING:<Esc>",                desc = "make current comment as warning" },
-        { "<leader>cp", "wiPERF:<Esc>",                   desc = "make current comment as perfect" }
+        { "<leader>cn", "wiNOTE: <Esc>", desc = "make current comment as note" },
+        { "<leader>ch", "wiHACK: <Esc>", desc = "make current comment as hack" },
+        { "<leader>ct", "wiTODO: <Esc>", desc = "make current comment as todo" },
+        { "<leader>cf", "wiFIX: <Esc>",  desc = "make current comment as fix" },
+        { "<leader>cw", "wiWARN: <Esc>", desc = "make current comment as warning" },
+        { "<leader>cp", "wiPERF: <Esc>", desc = "make current comment as perfect" }
     },
 }

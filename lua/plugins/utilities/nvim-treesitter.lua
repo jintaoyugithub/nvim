@@ -9,6 +9,7 @@ return {
 
             highlight = {
                 enable = true,
+                disable = { "regex" },
             },
 
             -- Set custom file type hightlight --

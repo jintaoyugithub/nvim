@@ -5,6 +5,27 @@ return {
 
     config = function()
         require("markview").setup({
+            typst = {
+                enable = false,
+
+                codes = {},
+                escapes = {},
+                headings = {},
+                labels = {},
+                list_items = {},
+                math_blocks = {},
+                math_spans = {},
+                raw_blocks = {},
+                raw_spans = {},
+                reference_links = {},
+                subscripts = {},
+                superscript = {},
+                symbols = {},
+                terms = {},
+                url_links = {}
+            },
+
+
             markdown = {
                 headings = {
                     enable = true,

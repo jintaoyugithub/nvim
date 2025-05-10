@@ -22,8 +22,8 @@ return {
         }
 
         -- Key Bindings --
-        vim.api.nvim_set_keymap('n', '<Tab>', ':bn<CR>', { noremap = true })
-        vim.api.nvim_set_keymap('n', '<S-Tab>', ':bp<CR>', { noremap = true })
-        vim.api.nvim_set_keymap('n', '<Leader><Tab>', ':bd<CR>', { noremap = true })
+        vim.api.nvim_set_keymap('n', '<leader>[', ':bn<CR>', { noremap = true })
+        vim.api.nvim_set_keymap('n', '<leader>]', ':bp<CR>', { noremap = true })
+        vim.api.nvim_set_keymap('n', '<Leader><CR>', ':bd<CR>', { noremap = true })
     end
 }

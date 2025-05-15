@@ -48,9 +48,6 @@ vim.api.nvim_set_keymap('n', '<leader>nt', ':tabe<CR>', {})
 -- Toggle Table Mode
 vim.api.nvim_set_keymap('n', '<leader>tm', ':TableModeToggle<CR>', { noremap = true })
 
--- Markdown preview with Glow
-vim.api.nvim_set_keymap('n', '<leader>mp', ':Glow<CR>', { noremap = true })
-
 -- Comment
 vim.api.nvim_set_keymap('v', '/', 'gc', {})
 

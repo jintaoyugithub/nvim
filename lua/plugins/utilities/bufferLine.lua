@@ -7,6 +7,14 @@ return {
         'nvim-tree/nvim-web-devicons'
     },
 
+    keys = {
+        { "<leader>]",    ":BufferLineCycleNext<CR>", desc = "move to next buffer" },
+        { "<leader>[",    ":BufferLineCyclePrev<CR>", desc = "move to prev buffer" },
+        { "<leader><CR>", ":bd<CR>",                  desc = "clost a buffer" },
+        { "<leader>pb",   ":BufferLinePick<CR>",      desc = "clost a buffer" },
+        { "<leader>bp",   ":BufferLineTogglePin<CR>", desc = "clost a buffer" },
+    },
+
     config = function()
         require("bufferline").setup {
             options = {
@@ -20,10 +28,5 @@ return {
                 },
             }
         }
-
-        -- Key Bindings --
-        vim.api.nvim_set_keymap('n', '<leader>[', ':bn<CR>', { noremap = true })
-        vim.api.nvim_set_keymap('n', '<leader>]', ':bp<CR>', { noremap = true })
-        vim.api.nvim_set_keymap('n', '<Leader><CR>', ':bd<CR>', { noremap = true })
     end
 }

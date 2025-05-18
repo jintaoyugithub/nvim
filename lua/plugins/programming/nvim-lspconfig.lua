@@ -5,6 +5,12 @@ return {
 
         local lspconfig = require("lspconfig")
         lspconfig.clangd.setup {
+            init_options = {
+                fallbackFlags = {
+                    '--std=c++11'
+                },
+            },
+
             capabilities = capabilities,
         }
         lspconfig.lua_ls.setup {

@@ -5,7 +5,8 @@ return {
     opts = {},    -- lazy.nvim will implicitly calls `setup {}`
 
     keys = {
-        { "<leader>tp", "<cmd>TypstPreview<cr>", desc = "Enable typst review" },
+        { "<leader>tp", "<cmd>TypstPreview<cr>",            desc = "Enable typst review" },
+        { "<leader>tc", "<cmd>TypstPreviewSyncCursor <cr>", desc = "Sync typst cursor" },
     },
 
     config = function()
